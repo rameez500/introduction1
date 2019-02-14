@@ -9,7 +9,7 @@ def View2(df):
     padding: 3px; font-family: monospace; font-size: 10px }</style>
     """
     s  = '<script type="text/Javascript">'
-    s += 'var win = window.open("derf", "erer", "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=780, height=200, top="+(screen.height-400)+", left="+(screen.width-840));'
+    s += 'var win = window.open("", "_blank",'PopUp',randomnumber "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=780, height=200, top="+(screen.height-400)+", left="+(screen.width-840));'
     s += 'win.document.body.innerHTML = \'' + (df.to_html() + css).replace("\n",'\\') + '\';'
     s += '</script>'
     return(HTML(s+css))

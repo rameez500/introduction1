@@ -8,8 +8,10 @@ def View2(df):
     tr, th, td { border: 1px solid #ccc; border-width: 1px 0 0 1px; border-collapse: collapse;
     padding: 3px; font-family: monospace; font-size: 10px }</style>
     """
+    var randomnumber = Math.floor((Math.random()*100)+1);
     s  = '<script type="text/Javascript">'
     s += 'var win = window.open("", "_blank",'PopUp',randomnumber "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=780, height=200, top="+(screen.height-400)+", left="+(screen.width-840));'
     s += 'win.document.body.innerHTML = \'' + (df.to_html() + css).replace("\n",'\\') + '\';'
     s += '</script>'
     return(HTML(s+css))
+

@@ -1,3 +1,16 @@
+import numpy
+import pandas as pd
+import seaborn as sn
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+from matplotlib.colors import ListedColormap, BoundaryNorm
+from sklearn import neighbors
+import matplotlib.patches as mpatches
+import graphviz
+from sklearn.tree import export_graphviz
+import matplotlib.patches as mpatches
+
+
 def plot_fruit_knn(X, y, n_neighbors, weights):
     X_mat = X[['height', 'width']].as_matrix()
     y_mat = y.as_matrix()
